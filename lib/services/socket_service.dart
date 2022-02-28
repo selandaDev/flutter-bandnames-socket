@@ -6,7 +6,7 @@ enum ServerStatus { online, offline, connecting }
 class SocketService with ChangeNotifier {
   ServerStatus _serverStatus = ServerStatus.connecting;
   final IO.Socket _socket =
-      IO.io('http://192.168.18.16:3000', <String, dynamic>{
+      IO.io('https://flutter-band-name.herokuapp.com/', <String, dynamic>{
     'transports': ['websocket'],
     'autoConnect': true,
   });
